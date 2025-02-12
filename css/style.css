@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+}
+
+body {
+    background-color: #eeecec;
+    color: white;
+    font-family: Poppins;
+    margin: 0; padding: 20px;
+}
+  
+ul,
+li {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+button {
+    border: none;
+    background: none;
+}
+
+.container {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    gap: 30px;
+}
+
+header .links a {
+    color: #333;
+}
+
+.tagline {
+    color: #333;
+    max-width: 500px;
+    margin: 0 auto; padding: 40px 0;
+    text-align: center;
+}
+
+.tagline h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.tagline p {
+    margin-top: 15px;
+    font-size: 0.7rem;
+}
+
+.tagline a {
+    background-color: #333;
+    border-radius: 30px;
+    color: white;
+    display: block;
+    margin: 15px auto; padding: 10px 20px;
+    width: max-content;
+}
+
+.image-grid-wrapper {
+    position: relative;
+    overflow-y: hidden;
+    --x-offset: -50px;
+    --y-offset: -50px;
+}
+
+.image-grid-wrapper::before,
+.image-grid-wrapper::after {
+    content: "";
+    background-color: #eeecec;
+    border-radius: 50%;
+    height: 100px;
+    position: absolute;
+}
+
+.image-grid-wrapper::before {
+    inset: var(--y-offset) var(--x-offset) 0;
+}
+
+.image-grid-wrapper::after {
+    inset: 0 var(--x-offset) var(--y-offset);
+    top: unset;
+}
+
+.image-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Active le scroll horizontal */
+    white-space: nowrap;
+    scrollbar-width: none; /* Pour Firefox */
+    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+}
+
+.image-grid img {
+    height: 400px; 
+}
+
+.image-grid-wrapper {
+    overflow: hidden; /* Cache la barre de scroll */
+}
+
+.image-grid::-webkit-scrollbar {
+    display: none; /* Pour Chrome, Safari et Opera */
+}
